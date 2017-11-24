@@ -60,4 +60,4 @@ Events:
 4. Termination Event
 5. Reserved for debugging
 6. CBR Traffic
-7. + VBR Traffic
+7. \+ VBR Traffic
