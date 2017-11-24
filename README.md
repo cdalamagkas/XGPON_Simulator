@@ -58,5 +58,6 @@ Events:
 2. Schedule Upstream XGTC burst
 3. XGTC Upstream frame arrival
 4. Termination Event
-5. CBR Traffic
-6+ VBR Traffic
+5. Reserved for debugging
+6. CBR Traffic
+7+ VBR Traffic
