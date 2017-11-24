@@ -40,16 +40,16 @@ Event_List rows
 
 ---------------------------------
 
-BWmap(1, ONU_ID) = Alloc_ID
-BWmap(2, ONU_ID) = StartTime
-BWmap(3, ONU_ID) = GrantSize
+* BWmap(1, ONU_ID) = Alloc_ID
+* BWmap(2, ONU_ID) = StartTime
+* BWmap(3, ONU_ID) = GrantSize
 
 ---------------------------------
 
-Downstream_Speed = 1244160000
-Upstream_Speed = 311040000
-Speedlight = 299792458
-GuardTime = 2.57201646e-8
+* Downstream_Speed = 1244160000
+* Upstream_Speed = 311040000
+* Speedlight = 299792458
+* GuardTime = 2.57201646e-8
 
 ---------------------------------
 
