@@ -2,7 +2,8 @@ function [ Traffic ] = Form_Traffic( hasVBR, hasCBR )
 % FORM_TRAFFIC Creates traffic objects based on user preferences
 %  Returns traffic objects of CBR and VBR traffic that ONU use to generate 
 %  traffic. User can edit manually the CBR traffic object parameters and
-%  specify Output.txt files. Each Output.txt file corresponds to independent VBR traffic that a single ONU generates.
+%  specify Output.txt files for VBR. Each Output.txt file corresponds to 
+%  independent VBR traffic that a single ONU generates.
 %
 %  See also XGPON, EVENT7, RNG, EXTRACT_DISTRIBUTION
 
@@ -25,7 +26,7 @@ else
 end
 
 if hasCBR
-    CBR = struct('isenabled', true, 'interarrival', 0.00012096,'packetsize', 1512);
+    CBR = struct('isenabled', true, 'interarrival', 0.000124,'packetsize', 1518);
 else
     CBR = struct('isenabled', false);
 end

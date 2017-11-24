@@ -27,7 +27,7 @@ end
 
 %% Non-Guaranteed bandwidth allocation phase
 if PAS_Flag && nnz(Non_Guaranteed_Demands) > 1 && sum(PHY_Payload(Non_Guaranteed_Demands)) > Residual_Bandwidth
-    %% allocate non-guaranteed BW using the market equilibria
+   %% allocate non-guaranteed BW using the market equilibrium
     s = zeros(2,0);
     for AllocID = 1:N
         if Non_Guaranteed_Demands(AllocID) > 0 
@@ -37,7 +37,7 @@ if PAS_Flag && nnz(Non_Guaranteed_Demands) > 1 && sum(PHY_Payload(Non_Guaranteed
     end
     a = zeros(1,length(s));
     for i = 1:length(s)
-        a(i) = floor( s(1,i) * Residual_Bandwidth / sum(s(1,:)) ); % allocate using the equilibra
+        a(i) = floor( s(1,i) * Residual_Bandwidth / sum(s(1,:)) ); % allocate using the equilibrium
         Final_Allocations(s(2,i)) = a(i) - ceil(a(i)/232)*16 - 8; % assign the clean amount of bytes
     end
 elseif C - sum(PHY_Payload(Guaranteed_Allocations)) > 0 && nnz(Non_Guaranteed_Demands) > 0
@@ -69,10 +69,6 @@ elseif C - sum(PHY_Payload(Guaranteed_Allocations)) > 0 && nnz(Non_Guaranteed_De
          end
       end
    end
-end
-
-if sum(PHY_Payload(Final_Allocations)) > C
-   error('sum(PHY_Payload(Final_Allocations)) > C\n');
 end
 
 %% Schedule allocations

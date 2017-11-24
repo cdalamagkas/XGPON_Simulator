@@ -1,6 +1,6 @@
 function [ BufOcc_Buffer, Total_Data, Packet_Delay, Arrivals, PDV ] = Event3 ( Time, Event_List, BufOcc_Buffer, Total_Data, Packet_Delay, Arrivals, PDV )
 % EVENT3 XGTC burst arrives at the OLT
-%	OLT receives a XGTC burst, which was sent by Event2. Upon the arrival, 
+%	OLT receives a XGTC burst, which is sent by Event2. Upon the arrival, 
 %  OLT records information that are used to measure throughput, mean packet
 %  delay and packet delay variation (PDV).
 %

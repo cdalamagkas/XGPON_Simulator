@@ -1,7 +1,7 @@
 clc; clear;
 fprintf('============ XGPON vs XGPON_GT Statistics ============\n');
 
-hasVBR=0; hasCBR=1; %Enable or disable CBR/VBR traffic
+hasVBR=1; hasCBR=1; %Enable or disable CBR/VBR traffic
 
 Traffic = Form_Traffic( hasVBR, hasCBR );
 
@@ -37,7 +37,7 @@ parfor i = 1:Experiments
       tmp_Packet_Loss_Ratio(1) = tmp_Packet_Loss_Ratio(1) + sum(Packet_Loss_Ratio)/length(Packet_Loss_Ratio);
 		tmp_PDV(1) = tmp_PDV(1) + sum(PDV)/length(PDV);
 		
-		[Packet_Delay, Goodput, Load_Fairness, Delay_Fairness, Packet_Loss_Ratio, PDV] = XGPON(Sim_Time, D, N(i), PDT, Traffic, true); %true disables Game Theory
+		[Packet_Delay, Goodput, Load_Fairness, Delay_Fairness, Packet_Loss_Ratio, PDV] = XGPON(Sim_Time, D, N(i), PDT, Traffic, true); %true enables Game Theory
 		tmp_Packet_Delay(2) = tmp_Packet_Delay(2) + sum(Packet_Delay)/length(Packet_Delay);
 		tmp_Goodput(2) = tmp_Goodput(2) + Goodput;
 		tmp_Load_Fairness(2) = tmp_Load_Fairness(2) + Load_Fairness;

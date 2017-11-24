@@ -5,6 +5,7 @@ function [out] = PHY_Payload(XGTC_Payloads)
 %  XGTC overhead + XGTC_Payload + FEC overhead. 
 %
 %  See also DBA.
+
    N = length(XGTC_Payloads);
    out = zeros(1, N);
 	XGTC_Frame = zeros(1, N);
@@ -12,4 +13,5 @@ function [out] = PHY_Payload(XGTC_Payloads)
       XGTC_Frame(i)  = XGTC_Payloads(i) + 8;
       out(i) = ceil(XGTC_Frame(i)/232)*16 + XGTC_Frame(i); 
    end
+   
 end

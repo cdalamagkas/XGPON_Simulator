@@ -1,5 +1,5 @@
 function [Guaranteed_Allocations, Demands] = Guaranteed_BA(Demands, D, N )
-% GUARANTEED_BANDWIDTH_ALLOCATION Allocates guaranteed bandwidth to AllocIDs
+% GUARANTEED_BA Allocates guaranteed bandwidth to AllocIDs
 %  Allocates R_F statically and R_A dynamically to AllocIDs. 
 %
 %  See also DBA, EVENT1.
