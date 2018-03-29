@@ -5,7 +5,7 @@ function [ BWmap, CAT, BufOcc_Buffer, Load_Fairness ] = DBA ( Time, BufOcc_Buffe
 %  transmission scheduling for the upstream channel based on the 
 %  received DBRus.
 % 
-%   See also EVENT1, GUARANTEED_BANDWIDTH_ALLOCATION, REED_SOLOMON.
+%   See also EVENT1, GUARANTEED_BANDWIDTH_ALLOCATION, PHY_PAYLOAD.
 
 Initial_Demands = BufOcc_Buffer;
 BufOcc_Buffer = zeros(1,N);
